@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html dir="ar" lang="ar">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>بطاقات تهنئة</title>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css">
+		<link rel="stylesheet" type="text/css" href="style.css?v=24.233225839">
+	</head>
+	<body onload="start()">
+		<div class="container">
+			<div class="centerImg">
+				<img src="img/logo.jpeg" height="200">
+            </div> 
+                <div class="headTitle">
+                    <h1> صمم بطاقة تهنئتك وإرسلها لأحبابك </h1>
+            </div>
+            
+			<br>
+            <br>
+			<div class="centerTitle">
+				<input type="text" id="inp" name="name" placeholder="اكتب اسمك واختر بطاقتك">
+			</div>
+			<div class="slider center">
+				<div class="slide">
+					<div class="cl">
+						<div class="">
+							<img  id="inv" style="display: none;" src="img/img1.jpeg">
+							<canvas id="canvas1" class="card1"></canvas>
+						</div>
+						<button class="MazinButton" id="btn-download1" type="button" >تحميل البطاقة</button>
+					</div>
+				</div>
+
+                <div class="slide">
+					<div class="cl">
+						<div class="">
+							<img  id="inv2" style="display: none;" src="img/img2.jpeg">
+							<canvas id="canvas2" class="card2"></canvas>
+						</div>
+						<button class="MazinButton" id="btn-download2" type="button">تحميل البطاقة</button>
+					</div>
+				</div>
+
+                <div class="slide">
+					<div class="cl">
+						<div class="">
+							<img  id="inv3" style="display: none;" src="img/img3.jpeg">
+							<canvas id="canvas3" class="card3"></canvas>
+						</div>
+						<button class="MazinButton" id="btn-download3" type="button">تحميل البطاقة</button>
+					</div>
+				</div>
+			</div>
+            <footer class="centerTitle">
+            <a href="https://hinddalshehri.github.io/" style="color: #b4cda3;">برمجة: هند الشهري  👩🏻‍💻</a><br>
+            <a href="https://www.freecounterstat.com" title="website view counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=hxc6hnsjyq18f4nuyz4uh6gqmsbhp77q" border="0" title="website view counter" alt="website view counter"></a>
+            </footer>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+		<script type="text/javascript">
+		
+		function start(){
+		    var canvas = document.getElementById('canvas1'),
+			inp = document.getElementById('inp'),
+			ctx = canvas.getContext('2d'),
+			img = document.getElementById('inv');
+			var image = new Image();
+			image.onload = function() {
+				ctx.drawImage(image, 0, 0);
+			};
+			image.src = "img/img1.jpg";
+			canvas.width = $(img).width();
+			canvas.crossOrigin = "Anonymous";
+			canvas.height = $(img).height();
+			ctx.drawImage($(img).get(0), 0, 0);
+			ctx.font = "75pt Kufam";
+			ctx.textAlign = "center";
+			img.addEventListener('contextmenu',
+				function (e) {
+					var dataURL =
+					canvas.toDataURL('image/png');
+					mirror.src = dataURL;
+				});
+			$(document).on('input', '#inp', function () {
+				//redraw image
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				ctx.drawImage($(img).get(0), 0, 0);
+				//refill text
+				ctx.fillStyle = "#066163";
+				ctx.fillText($(inp).val(), $(img).width()/1.5, 1000);
+				
+			});
+			$('button').click(function() {
+				console.log(ctx.getImageData(50, 50, 100, 100));
+			});
+			
+			document.getElementById("btn-download1").addEventListener("click",function() {
+				var filename = document.getElementById("inp").value;
+				var dataURL = canvas.toDataURL('image/jpg');
+				download(filename,dataURL);
+			}, false);
+			
+			
+			var canvas2 = document.getElementById('canvas2'),
+			ctx2 = canvas2.getContext('2d'),
+			img2 = document.getElementById('inv2');
+			var image2 = new Image();
+			image2.onload = function() {
+				ctx2.drawImage(image2, 0, 0);
+			};
+			image2.src = "img/img2.jpeg";
+			canvas2.width = $(img2).width();
+			canvas2.crossOrigin = "Anonymous";
+			canvas2.height = $(img2).height();
+			ctx2.drawImage($(img2).get(0), 0, 0);
+			ctx2.font = "70pt Almarai";
+			ctx2.textAlign = "center";
+			img2.addEventListener('contextmenu',
+				function (e) {
+					var dataURL =
+					canvas2.toDataURL('image/jpg');
+					mirror.src = dataURL;
+				});
+			$(document).on('input', '#inp', function () {
+				//redraw image
+				ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+				ctx2.drawImage($(img2).get(0), 0, 0);
+				//refill text
+				ctx2.fillStyle = "#212121";
+				ctx2.fillText($(inp).val(), $(img2).width()/2.1, 800);
+				
+			});
+			$('button').click(function() {
+				console.log(ctx2.getImageData(50, 50, 100, 100));
+			});
+			
+			document.getElementById("btn-download2").addEventListener("click",function() {
+				var filename = document.getElementById("inp").value;
+				var dataURL = canvas2.toDataURL('image/jpg');
+				download(filename,dataURL);
+			}, false);
+
+         //here
+         var canvas3 = document.getElementById('canvas3'),
+			ctx3 = canvas3.getContext('2d'),
+			img3 = document.getElementById('inv3');
+			var image3 = new Image();
+			image3.onload = function() {
+				ctx3.drawImage(image3, 0, 0);
+			};
+			image3.src = "img/img3.jpeg";
+			canvas3.width = $(img3).width();
+			canvas3.crossOrigin = "Anonymous";
+			canvas3.height = $(img3).height();
+			ctx3.drawImage($(img3).get(0), 0, 0);
+			ctx3.font = "30pt Almarai";
+			ctx3.textAlign = "center";
+			img3.addEventListener('contextmenu',
+				function (e) {
+					var dataURL =
+					canvas3.toDataURL('image/jpg');
+					mirror.src = dataURL;
+				});
+			$(document).on('input', '#inp', function () {
+				//redraw image
+				ctx3.clearRect(0, 0, canvas3.width, canvas3.height);
+				ctx3.drawImage($(img3).get(0), 0, 0);
+				//refill text
+				ctx3.fillStyle = "#485A40";
+				ctx3.fillText($(inp).val(), $(img3).width()/1.6, 850);
+				
+			});
+			$('button').click(function() {
+				console.log(ctx3.getImageData(50, 50, 100, 100));
+			});
+			
+			document.getElementById("btn-download3").addEventListener("click",function() {
+				var filename = document.getElementById("inp").value;
+				var dataURL = canvas3.toDataURL('image/jpg');
+				download(filename,dataURL);
+			}, false);
+         
+		}
+    		function download(file,path) {
+    		var element = document.createElement('a');
+			element.setAttribute('href',path);
+			element.setAttribute('download', "بطاقة "+file);
+			document.body.appendChild(element);
+			element.click();
+			document.body.removeChild(element);
+			}
+			
+			
+		</script>
+		<script>
+			var $st = $('.pagination');
+			var $slickEl = $('.center');
+			
+			$slickEl.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+				var i = (currentSlide ? currentSlide : 0) + 1;
+				$st.text(i + ' of ' + slick.slideCount);
+			});
+			
+			$slickEl.slick({
+				centerMode: true,
+                centerPadding: '350px',
+				slidesToShow: 1,
+				focusOnSelect: true,
+				dots: true,
+				infinite: false,
+				responsive: [
+				{
+					breakpoint: 1025,
+					settings: {
+						arrows: false,
+						centerMode: true,
+						centerPadding: '350px',
+						slidesToShow: 1
+				    }
+				},
+					{
+						breakpoint: 769,
+						settings: {
+							arrows: false,
+							centerMode: true,
+							centerPadding: '160px',
+							slidesToShow: 1
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							arrows: false,
+							centerMode: true,
+							centerPadding: '80px',
+							slidesToShow: 1
+						}
+					},
+					{
+						breakpoint: 321,
+						settings: {
+							arrows: false,
+							centerMode: true,
+							centerPadding: '50px',
+							slidesToShow: 1
+						}
+					}
+				]
+			});
+			
+			
+			
+		</script>
+	</body>
+</html>
