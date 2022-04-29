@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Vibes&family=Raleway:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/amiri.css');
+@import url('https://fonts.googleapis.com/css?family=Kufam'); 
+ body {
+	background-color: #f7f7f7;
+	margin: 0px;
+	font-weight: unset;
+	font-family: 'Almarai', sans-serif;
+	
+}
+ .container {
+	padding: 0px;
+	margin: 0px;
+}
+ h1 {
+     position:relative;
+     font-size: 30pt;
+     text-align: center;
+	 color:#c1ad95;
+	font-weight: unset;
+}
+ .cl {
+/*	 height: 200px;*/
+/*	 width: 200px;    */
+	 padding: 10px;
+/*	 border-radius: 20px;*/
+/*	 box-shadow: 0 0 15px rgba(80 80 80 / 0.5);*/
+	text-align: -webkit-center;
+}
+ .cl-yellow {
+	 background: #f1c40f;
+}
+ .cl-blue {
+	 background: #3498db;
+}
+ .cl-red {
+	 background: #e74c3c;
+}
+ .slick-active {
+	 padding: 20px 0;
+}
+ .slick-center {
+	 transform: scale(1.08);
+}
+ .slick-slide:not(.slick-active) {
+	 margin: 20px 0;
+}
+ .child {
+	 width: 100%;
+}
+ .slide:not(.slick-active) {
+	 cursor: pointer;
+}
+ .pagination {
+	 text-align: center;
+	 color: #fff;
+	 font-family: 'Raleway', sans-serif;
+	 font-size: 1.2rem;
+}
+ .card{
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgb(80 80 80 / 42%);
+}
+.slick-slider, .slick-list, .slick-track {
+	height: 100%;
+}
+.headTitle{
+	font-family: 'Kufam', 'cursive';
+}
+.centerTitle{
+	text-align: -webkit-center;
+	text-align: center;
+    font-size: 25px;
+    color: #b4cda3;
+    font-family: 'Vibes', 'cursive';
+}
+.slick-prev,.slick-next,.slick-next:before,.slick-prev:before{
+	right: 0px;
+	display: none;
+}
+.MazinButton{
+	padding: 10px 20px;
+	border-radius: 38px;
+	border: 0;
+	font-family: 'Almarai', sans-serif;
+	box-shadow: 0 0 5px rgba(109 109 109 / 0.5);
+	margin-top: 20px;
+	background-color: #c1ad95;
+	color: white;
+}
+input[type="text"] {
+    box-align: center;
+	padding: 3px 2px;
+	border-radius: 8px;
+	border: 2px solid #828282;
+	background-color: #c1ad95;
+	margin: 5px;
+	color: #FFFF;
+	text-align: center;
+	font-family: 'Almarai', sans-serif;
+	line-height: 40px;
+	font-size: 20px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+::-webkit-input-placeholder { 
+  color: rgba(255 255 255 / 0.5);
+}
+::-moz-placeholder { 
+  color: rgba(255 255 255 / 0.5);
+}
+:-ms-input-placeholder {
+  color: rgba(255 255 255 / 0.5);
+}
+:-moz-placeholder { 
+  color: rgba(255 255 255 / 0.5);
+}
+
+.MazinCard {
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0,0,0,.125);
+	border-radius: .25rem;
+}
+ .card1{
+	width: 300px;
+	height: 266;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgb(80 80 80 / 42%);
+ }
+  .card2{
+	width: 300px;
+	height: 266;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgb(80 80 80 / 42%);
+ }
+  .card3{
+	width: 300px;
+	height: 266px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgb(80 80 80 / 42%);
+ }
+  .card4{
+	width: 200px;
+	height: 150px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgb(80 80 80 / 42%);
+ }
+ canvas {
+	width: 95%;
+}
+.centerImg{
+    position:relative;
+}
+.footercount{
+    text-align: center;
+}
